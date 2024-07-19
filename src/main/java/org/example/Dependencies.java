@@ -8,6 +8,6 @@ import org.example.windows.controller.UserController;
 
 public class Dependencies {
     private static final UserRepository userRepository = new InMemoryUserRepository();
-    private static final UserManagement userManagement = new UserService(userRepository);
-    public static final UserController userController = new UserController(userManagement);
+    private static final UserManagement userService = new UserService(userRepository);
+    public static final UserController userController = new UserController(userService);
 }
